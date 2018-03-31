@@ -85,7 +85,7 @@ abstract class Resource {
     -Collect Resource list with resource id using getall rather then finder otherwise ordering will not be maintained
 */
 
-    List<Resource> topPost(){
+   static List<Resource> topPost(){
 
         List resourceIds = ResourceRating.createCriteria().list {
             projections {
@@ -102,6 +102,16 @@ abstract class Resource {
 
 
 
+    }
+
+    static List<Resource> recentShares(){
+
+        List results = Resource.createCriteria().list {
+            order("dateCreated", "desc")
+            maxResults(2)
+
+        }
+        return results
     }
 
 }
