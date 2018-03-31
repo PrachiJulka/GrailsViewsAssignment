@@ -15,9 +15,11 @@
 <body>
 hello
 %{--<g:if test="${flash.error}">--}%
-${keyFail}
-<g:message message="${flash.error}"></g:message>
+%{--${keyFail}--}%
+%{--<g:message message="${flash.error}"></g:message>--}%
+%{--
 <g:message message="${flash.message}"></g:message>
+--}%
 %{--</g:if>--}%
 <div class="container">
     <div class="row">

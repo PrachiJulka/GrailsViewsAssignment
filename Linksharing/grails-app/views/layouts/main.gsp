@@ -25,8 +25,14 @@
                 <span class="glyphicon glyphicon-remove-sign  cross"></span>
             </div>
 
+            <g:if test="${flash.error}">
+                <g:message message="${flash.error}"></g:message>
 
+                  </g:if>
+            <g:if test="${flash.message}">
+                <g:message message="${flash.message}"></g:message>
 
+            </g:if>
 
    %{-- <div class="footer" role="contentinfo"></div>
 
