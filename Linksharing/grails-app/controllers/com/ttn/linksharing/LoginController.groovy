@@ -2,9 +2,7 @@ package com.ttn.linksharing
 
 import com.ttn.constants.DefaultPassword
 
-/*Errors with proper message properties should be
-rendered if user is not set and flash message should be set.
-*/
+/*Create templates for resource/show topic/show user/login user/register*/
 
 class LoginController {
 
