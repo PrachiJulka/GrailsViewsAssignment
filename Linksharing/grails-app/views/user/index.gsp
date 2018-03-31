@@ -266,8 +266,9 @@
                             </div>
                         </div>
                         <div class="panel-body">
-                            <g:e
-                            <div class="row">
+                <g:each in="${com.ttn.linksharing.Topic.getTrendingTopics()}" var="trendingTopics">
+
+                                 <div class="row">
 
                                 <div class="col-lg-offset-1 col-lg-2">
                                     <img class="img-responsive" alt="dummy" src="index.jpeg"/>
@@ -275,12 +276,12 @@
                                 <div class="col-lg-9">
                                     <div class="row">
                                         <div class=col-sm-12>
-                                            <a href="#" class="anchor">Grails </a>
+                                            <a href="#" class="anchor">${trendingTopics.name} </a>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-sm-4">
-                                            <small class="text-muted">@uday</small>
+                                            <small class="text-muted">@${trendingTopics.createdBy.userName}</small>
                                         </div>
                                         <div class="col-sm-4">
                                             Subscriptions</div>
@@ -290,7 +291,7 @@
                                         <div class="col-sm-4"><a>Unsubscribe</a></div>
 
                                         <div class="col-sm-4"><a>50</a></div>
-                                        <div class="col-sm-4"><a>30</a></div>
+                                        <div class="col-sm-4"><a>${trendingTopics.count}</a></div>
                                     </div>
                                     <div class="row">
                                         <div class="col-sm-4">
@@ -317,7 +318,9 @@
                                 </div>
 
                                 <hr/>
-                                <div class="row">
+                                 </div>
+                </g:each>
+                        %{--        <div class="row">
                                     <div class="col-lg-offset-1 col-lg-2">
                                         <img class="img-responsive" alt="dummy" src="index.jpeg"/>
                                     </div>
@@ -361,7 +364,7 @@
                                         </div>
                                     </div>
 
-                                </div>
+                                </div>--}%
                             </div>
                         </div>
                     </div>
