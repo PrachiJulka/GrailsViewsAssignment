@@ -13,7 +13,7 @@ class LoginCheckInterceptor {
     boolean before() {
         if (!session.user) {
            flash.error= "NO ACTIVE SESSION"
-           redirect controller: 'login', action: 'loginHandler'
+         //  redirect controller: 'login', action: 'loginHandler'
         false
         }
 

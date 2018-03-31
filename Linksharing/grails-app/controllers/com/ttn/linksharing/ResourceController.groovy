@@ -33,6 +33,8 @@ class ResourceController {
         render(ratingInfoVO.averagescore)
        // println Topic.getTrendingTopics()
         }
+
+
     def handleNullPointerException(NullPointerException e) {
 
         render ("null found")

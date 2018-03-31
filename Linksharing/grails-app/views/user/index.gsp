@@ -386,7 +386,7 @@
                 </div>
 
                 <div class="modal-body">
-                    <form class="form-horizontal" >
+                <g:form class="form-horizontal" controller="linkResource" action="save">
                         <div class="form-group">
                             <div class="col-sm-2">
                                 <label class="control-label col-sm-2">Link</label>
@@ -416,12 +416,12 @@
 
                         <div class="form-group">
                             <div class="col-sm-offset-2 col-sm-10">
-                                <input type="button"  class="btn btn-primary" id="shareLinkBtn" value="Submit" />
+                                <g:actionSubmit value="Save" class="btn btn-primary"/>
                                 <input type="button" class="btn btn-primary" id="cancelLinkBtn" value="Close" data-dismiss="modal"/>
                             </div>
                         </div>
 
-                    </form>
+                    </g:form>
                 </div>
             </div>
         </div>
@@ -541,8 +541,9 @@
             </div>
 
             <div class="modal-body">
-                <form class="form-horizontal">
-                    <div class="form-group">
+<g:form class="form-horizontal" controller="topic" action="save">
+
+    <div class="form-group">
                         <label class="col-sm-2 control-label">Name</label>
                         <div class="col-sm-10">
 
@@ -562,12 +563,12 @@
                     <div class="form-group">
                         <div class="col-sm-offset-2 col-sm-10">
 
+                            <g:actionSubmit value="Save" class="btn btn-primary"/>
 
-                            <input type="button"  id="insert" value="Add" class="btn btn-primary"/>
                             <input type="button"   value="Cancel" data-dismiss="modal" class="btn btn-primary"/>
                         </div>
                     </div>
-                </form>
+                </g:form>
             </div>
         </div>
     </div>

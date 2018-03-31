@@ -24,14 +24,16 @@ class TopicController {
     }
 
     def save(Topic topic,String seriousness){
+        topic.createdBy=session.user
         if(topic.save()){
-            render("saved Successfully")
+            flash.message="Saved"
+
         }
         else{
             flash.error="Error"
-            render("Error")
-        }
 
+        }
+        forward(controller:'user', action: 'index')
 
     }
     def handleObjectNotFoundException(ObjectNotFoundException e) {
