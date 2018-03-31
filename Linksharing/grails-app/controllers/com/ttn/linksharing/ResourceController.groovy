@@ -26,11 +26,13 @@ class ResourceController {
     }
     def show(Integer id){
         Resource resource=Resource.get(id)
-        SearchCO searchCO=new SearchCO(q:"dcdcsd")
+        /*SearchCO searchCO=new SearchCO(q:"dcdcsd")
         RatingInfoVO ratingInfoVO= resource.getRatingInfoVo(resource)
         println ("------------ ${resource.topPost()}")
         println ("vmdfkvmdkfvmdkm ${session.user.getUnreadResource(searchCO)}")
         render(ratingInfoVO.averagescore)
+        */
+        Topic.getTrendingTopics()
        // println Topic.getTrendingTopics()
         }
 

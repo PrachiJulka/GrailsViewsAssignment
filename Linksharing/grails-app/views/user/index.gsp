@@ -266,6 +266,7 @@
                             </div>
                         </div>
                         <div class="panel-body">
+                            <g:e
                             <div class="row">
 
                                 <div class="col-lg-offset-1 col-lg-2">
