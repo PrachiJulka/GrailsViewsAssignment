@@ -8,6 +8,7 @@ rendered if user is not set and flash message should be set.
 
 class LoginController {
 
+    static allowedMethods=[loginHandler: 'GET']
     def index() {
 
 
@@ -18,10 +19,11 @@ class LoginController {
         redirect(action:'login/index')
     }
 
-    def loginHandler(String userName, String password) {
-        println(userName)
-        User user = User.findByUserNameAndPassword(userName, password)
-        if(user!=null) {
+    def loginHandler(String email, String password) {
+      //  println(userName)
+        User user = User.findByUserNameOrEmail(email, email)
+
+        if(user!=null && user.password==password) {
 
             if(user.active) {
              session.user=user

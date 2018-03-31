@@ -4,7 +4,8 @@
   Date: 28/3/18
   Time: 8:40 PM
 --%>
-
+%{--
+Login should work from login form on home page and show top posts and recent post on home page--}%
 <%@ page contentType="text/html;charset=UTF-8" %>
 <html>
 <head>
@@ -71,17 +72,17 @@
                 <div class="panel-heading">Login</div>
                 <div class="panel-body">
 
-                    <form class="form-horizontal">
+                    <g:form class="form-horizontal" controller="login" action="loginHandler">
                         <div class="form-group">
                             <label class="control-label col-sm-2" for="email">Email:</label>
                             <div class="col-sm-10">
-                                <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+                                <input type="text" class="form-control" id="email" placeholder="Enter email" name="email">
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="control-label col-sm-2" for="pwd">Password:</label>
+                            <label class="control-label col-sm-2" for="password">Password:</label>
                             <div class="col-sm-10">
-                                <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd">
+                                <input type="password" class="form-control" id="password" placeholder="Enter password" name="password">
                             </div>
                         </div>
 
@@ -91,10 +92,10 @@
                             </div>
 
                             <div class="col-sm-5">
-                                <button type="submit" class="btn btn-default">LogIn</button>
+                                <g:actionSubmit  value="Save" class="btn btn-default">LogIn</g:actionSubmit>
                             </div>
                         </div>
-                    </form>
+                    </g:form>
                 </div>
             </div>
         </div>
@@ -182,7 +183,7 @@
                         <div class="form-group">
                             <label class="control-label col-sm-4" for="email">Email*:</label>
                             <div class="col-sm-8">
-                                <input type="email" class="form-control" id="email" placeholder="Enter Email">
+                                <input type="email" class="form-control" id="email1" placeholder="Enter Email">
                             </div>
                         </div>
 
@@ -196,7 +197,7 @@
                         <div class="form-group">
                             <label class="control-label col-sm-4" for="password">Password*:</label>
                             <div class="col-sm-8">
-                                <input type="password" class="form-control" id="password" placeholder="Enter Password">
+                                <input type="password" class="form-control" id="password1" placeholder="Enter Password">
                             </div>
                         </div>
                         <div class="form-group">
@@ -357,7 +358,7 @@
                         <label class="col-sm-2 control-label">Email</label>
                         <div class="col-sm-10">
 
-                            <input class="form-control" type="email" placeholder="Email" id="email" />    </div>
+                            <input class="form-control" type="email" placeholder="Email" id="emailId" />    </div>
 
                     </div>
                     <div class="form-group">
