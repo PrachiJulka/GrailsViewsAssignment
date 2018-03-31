@@ -5,8 +5,8 @@ Use read() for /topic/show and load() for /resource/delete & /topic/delete actio
 class UserController {
 
     def index() {
-        render(session.user.userName)
-        session.user.getUnreadResource()
+        /*render(session.user.userName)*/
+       /* session.user.getUnreadResource()*/
     }
 
     def show(Integer id){
