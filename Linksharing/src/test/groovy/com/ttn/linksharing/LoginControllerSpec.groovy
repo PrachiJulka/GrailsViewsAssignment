@@ -21,17 +21,17 @@ class LoginControllerSpec extends Specification implements ControllerUnitTest<Lo
         false == false
     }
 
-   /* def "check when user sessions exists in index method"() {
+    /*def "check when user sessions exists in index method"() {
         given: "a session user exists"
         session["user"] = new User()
-
-        when:
-        controller.loginHandler("admin","admin@123")
+         when:
+        controller.loginHandler("adminPortal","ROOT@123")
 
         then:
         response.forwardedUrl == '/user/index'
     }
-    def "check if user session exists in index method"() {
+*/
+/*    def "check if user session exists in index method"() {
         given: "a session user exists"
         session["user"] = null
 

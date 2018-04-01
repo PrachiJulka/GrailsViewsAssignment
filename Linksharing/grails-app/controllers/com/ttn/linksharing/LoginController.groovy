@@ -18,7 +18,7 @@ class LoginController {
     }
 
     def loginHandler(String userName, String password) {
-      //  println(userName)
+
         User user = User.findByUserNameAndPassword(userName, password)
 
         if(user!=null) {

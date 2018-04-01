@@ -1,5 +1,7 @@
 package com.ttn.linksharing
 
+import com.ttn.linksharing.enums.Seriousness
+import com.ttn.linksharing.enums.Visibility
 import grails.testing.gorm.DomainUnitTest
 
 import spock.lang.Specification
