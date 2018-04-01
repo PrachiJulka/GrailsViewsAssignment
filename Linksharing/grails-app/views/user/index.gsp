@@ -375,57 +375,7 @@
 <!--Share Link-->
 <!--Share Link Modal-->
 <div id="shareLink" class="modal fade" role="dialog">
-    <div class="container">
-        <div class="modal-dialog">
-
-            <!-- Modal content-->
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">Share Link (Pop up)</h4>
-                </div>
-
-                <div class="modal-body">
-                    <form class="form-horizontal" >
-                        <div class="form-group">
-                            <div class="col-sm-2">
-                                <label class="control-label col-sm-2">Link</label>
-                            </div>
-                            <div class="col-sm-10">
-                                <input class="form-control" type="text" placeholder="Link" id="link" />
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label class="control-label col-sm-2 font-normal" for="email" style="text-align: left" >Description*</label>
-                            <div class="col-sm-10">
-
-                                <textarea  class="form-control" rows="4" placeholder="Description" id="descriptionLink"></textarea>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label class="control-label col-sm-2">Link</label>
-                            <div class="col-sm-4">
-                                <select class="form-control" name="topic" id="topicLink">
-                                </select>
-
-                            </div>
-
-                        </div>
-
-                        <div class="form-group">
-                            <div class="col-sm-offset-2 col-sm-10">
-                                <input type="button"  class="btn btn-primary" id="shareLinkBtn" value="Submit" />
-                                <input type="button" class="btn btn-primary" id="cancelLinkBtn" value="Close" data-dismiss="modal"/>
-                            </div>
-                        </div>
-
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
+    <g:render template="/linkResource/link"/>
 </div>
 
 <!--Share Document Modal-->
@@ -487,93 +437,14 @@
                     Send Invitation Modal
              -->
 <div id="SendInvite" class="modal fade" role="dialog">
-    <div class="modal-dialog">
-
-        <!-- Modal content-->
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title">Send Invitation (Pop up)</h4>
-            </div>
-
-            <div class="modal-body">
-                <form class="form-horizontal" >
-                    <div class="form-group">
-                        <label class="col-sm-2 control-label">Email</label>
-                        <div class="col-sm-10">
-
-                            <input class="form-control" type="email" placeholder="Email" id="email" />    </div>
-
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label col-sm-2">Link</label>
-                        <div class="col-sm-4">
-                            <select class="form-control" name="topic" >
-                            </select>
-
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <div class="col-sm-offset-2 col-sm-10">
-
-                            <input type="button" value="Send Invite" name="Send Invite" id="invite" class="btn btn-primary"/>
-                            <input type="button" name="Cancel" value="Cancel" id="cancel" data-dismiss="modal" class="btn btn-primary"/>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
+    <g:render template="email"/>
 </div>
 
 
 
-<!-- Create Topic Modal -->
 <div id="CreateTopic" class="modal fade" role="dialog">
-    <div class="modal-dialog">
-
-        <!-- Modal content-->
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">x</button>
-                <h4 class="modal-title">Create Topic(Pop up)</h4>
-            </div>
-
-            <div class="modal-body">
-                <form class="form-horizontal">
-                    <div class="form-group">
-                        <label class="col-sm-2 control-label">Name</label>
-                        <div class="col-sm-10">
-
-                            <input class="form-control" type="text" placeholder="Name" id="name" name="name" />
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-sm-2 control-label">Visibility</label>
-                        <div class="col-sm-10">
-
-                            <select name="visibility" id="visibility">
-                                <option value="PUBLIC">Public</option>
-                                <option value="PRIVATE">Private</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="col-sm-offset-2 col-sm-10">
-
-
-                            <input type="button"  id="insert" value="Add" class="btn btn-primary"/>
-                            <input type="button"   value="Cancel" data-dismiss="modal" class="btn btn-primary"/>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
+    <g:render template="create"/>
 </div>
-
-
 
 
 </body>
