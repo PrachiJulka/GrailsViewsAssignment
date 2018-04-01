@@ -25,9 +25,11 @@ class BootStrap {
 //       def str= Resource.search(resourceSearchCO).list()
 //        println(str)
         Resource resource = Resource.get(5)
+/*
         println resource.totalVotes(resource)
         println resource.avgScore(resource)
         println resource.totalScore(resource)
+*/
         List topics = Topic.getTrendingTopics()
         topics.each {
             println it.id

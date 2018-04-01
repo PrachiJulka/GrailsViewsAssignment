@@ -14,7 +14,11 @@ class Topic {
     Visibility visibility
     //List<Resource> resourceList
     List getSubscribedUser(){
-        return this.subscriptions.user.toList()
+       List subscribedTopics=this.subscriptions.user.toList(){
+           maxResults(5)
+       }
+        return subscribedTopics
+
     }
 
     static transients = ['subscribedUser']

@@ -1,4 +1,7 @@
 package com.ttn.linksharing
+
+import com.ttn.linksharing.enums.Visibility
+
 /*
 Use read() for /topic/show and load() for /resource/delete & /topic/delete action.
 */

@@ -152,21 +152,22 @@
                         <div class="panel-body">
                             <div class="row">
 
+
+                                %{--    <% out.println "${session.user?.subscribedTopic?.topics?.name}"%>
+                                --}%    <g:each in="${session.user?.subscribedTopic}" var="subscribedTopics">
+
                                 <div class="col-lg-offset-1 col-lg-2">
                                     <img class="img-responsive" alt="dummy" src="index.jpeg"/>
                                 </div>
                                 <div class="col-lg-9">
-                                    <g:each in="${session.user.subscribedTopic}" var="subscribedTopics">
-
-                                    </g:each>
                                     <div class="row">
                                         <div class="col-sm-12">
-                                            <a href="#" class="anchor">${subscribedTopics.topics.name} </a>
+                                            <a href="#" class="anchor">${subscribedTopics?.topics?.name} </a>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-sm-4">
-                                            <small class="text-muted">@${subscribedTopics.user.userName}</small>
+                                            <small class="text-muted">@${subscribedTopics?.user?.userName}</small>
                                         </div>
                                         <div class="col-sm-4">
                                             Subscriptions</div>
@@ -201,9 +202,9 @@
 
                                     </div>
                                 </div>
-
+                            </g:each>
                                 <hr>
-                                <div class="row">
+                             %{--   <div class="row">
                                     <div class="col-lg-offset-1 col-lg-2">
                                         <img class="img-responsive" alt="dummy" src="index.jpeg"/>
                                     </div>
@@ -247,7 +248,7 @@
                                         </div>
                                     </div>
 
-                                </div>
+                                </div>--}%
                             </div>
                         </div>
                     </div>
@@ -412,9 +413,13 @@
                         </div>
 
                         <div class="form-group">
-                            <label class="control-label col-sm-2">Link</label>
+                            <label class="control-label col-sm-2">Topics</label>
                             <div class="col-sm-4">
                                 <select class="form-control" name="topic" id="topicLink">
+                                    <g:each in="${session.user?.subscribedTopic}" var="subscribedTopics">
+
+                                        <option value="${subscribedTopics?.topics?.name}">${subscribedTopics?.topics?.name}</option>
+                                </g:each>
                                 </select>
 
                             </div>
@@ -513,9 +518,14 @@
 
                     </div>
                     <div class="form-group">
-                        <label class="control-label col-sm-2">Link</label>
+                        <label class="control-label col-sm-2">Topics</label>
                         <div class="col-sm-4">
-                            <select class="form-control" name="topic" >
+                            <select name='topic' id="inviteEmails">
+
+                                <g:each in="${session.user?.subscribedTopic}" var="subscribedTopics">
+
+                                <option value="${subscribedTopics?.topics?.name}">${subscribedTopics?.topics?.name}</option>
+                            </g:each>
                             </select>
 
                         </div>
