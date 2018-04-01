@@ -7,7 +7,7 @@ import com.ttn.linksharing.enums.Visibility
 Add resource show action and get trending topics also
 
     - Public Topic with maximum resources is considered as a trending topic
-    - Create static method getTrendingTopics in Topic domain which will return list of TopicVO
+    - _create.gsp static method getTrendingTopics in Topic domain which will return list of TopicVO
     - TopicVO will have id,name,visibility,count,createdBy fields
     - Use createalias and groupproperty in criteria
     - Use count for getting count of resources of a topic

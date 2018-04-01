@@ -1,6 +1,6 @@
 package com.ttn.linksharing
 
-//Create update action which takes an id and serious
+//_create.gsp update action which takes an id and serious
 // as a parameter if subscription and seriousness found,
 // then save else render not found, if saved then render success else errors
 class SubscriptionController {

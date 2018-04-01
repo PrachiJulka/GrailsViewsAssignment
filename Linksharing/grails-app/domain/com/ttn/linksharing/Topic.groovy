@@ -4,7 +4,7 @@ import com.ttn.linksharing.enums.Seriousness
 import com.ttn.linksharing.enums.Visibility
 import com.ttn.linksharing.vo.TopicVO
 
-/*Use eager fetching for topic and user in subscription*/
+/*_create.gsp transient method getSubscribedUsers in topic domain to get all the subscribed users*/
 
 class Topic {
 
@@ -13,15 +13,13 @@ class Topic {
     Date lastUpdated
     Visibility visibility
     //List<Resource> resourceList
-    List getSubscribedUser(){
-       List subscribedTopics=this.subscriptions.user.toList(){
-           maxResults(5)
-       }
-        return subscribedTopics
+    List getSubscribedUsers(){
+
+        return this.subscriptions.user.toList()
 
     }
 
-    static transients = ['subscribedUser']
+    static transients = ['subscribedUsers']
 
     static belongsTo = [ createdBy : User]
     static hasMany = [subscriptions:Subscription, resources:Resource]
@@ -50,7 +48,7 @@ class Topic {
     Add resource show action and get trending topics also
 
     - Public Topic with maximum resources is considered as a trending topic
-    - Create static method getTrendingTopics in Topic domain which will return list of TopicVO
+    - _create.gsp static method getTrendingTopics in Topic domain which will return list of TopicVO
     - TopicVO will have id,name,visibility,count,createdBy fields
     - Use createalias and groupproperty in criteria
     - Use count for getting count of resources of a topic

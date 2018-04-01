@@ -1,6 +1,7 @@
 package com.ttn.linksharing
 
 import com.ttn.linksharing.co.ResourceSearchCO
+import com.ttn.linksharing.enums.Visibility
 import org.hibernate.ObjectNotFoundException
 
 /*
@@ -21,9 +22,7 @@ class ResourceController {
         render ("no object found")
     }
     def search(){
-        ResourceSearchCO resourceSearchCO=new ResourceSearchCO()
-        if(resourceSearchCO.q)
-            resourceSearchCO.visibility=Visibility.PUBLIC
+     search
     }
     def show(Integer id){
         Resource resource=Resource.get(id)

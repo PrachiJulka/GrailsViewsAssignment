@@ -1,5 +1,5 @@
 package com.ttn.linksharing.enums
-//Create a method in visibility enum to convert string into enum and write test case for the same
+//_create.gsp a method in visibility enum to convert string into enum and write test case for the same
 enum Visibility {
     PUBLIC,PRIVATE
 

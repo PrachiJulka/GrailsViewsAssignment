@@ -28,7 +28,7 @@
                     </div>
 
                     <div class="col-lg-9">
-                        <p class="name-font">Uday Pratap Singh<sub class="text-muted">@uday</sub></p>
+                        <p class="name-font">${session.user.userName}<sub class="text-muted">@${session.user.firstName}</sub></p>
                         <div class="row">
                             <div class="col-sm-6">
                                 <span class="">Subscription</span>
@@ -39,11 +39,11 @@
                         </div>
                         <div class="row">
                             <div class="col-sm-6">
-                                <a href="#">50</a>
+                                <a href="#">20</a>
 
                             </div>
                             <div class="col-sm-6">
-                                <a href="#">50</a>
+                                <a href="#">10</a>
 
                             </div>
                         </div>
@@ -154,7 +154,8 @@
 
 
                                 %{--    <% out.println "${session.user?.subscribedTopic?.topics?.name}"%>
-                                --}%    <g:each in="${session.user?.subscribedTopic}" var="subscribedTopics">
+                                --}%
+                                <g:each in="${session.user?.subscribedTopic}" var="subscribedTopics">
 
                                 <div class="col-lg-offset-1 col-lg-2">
                                     <img class="img-responsive" alt="dummy" src="index.jpeg"/>
@@ -546,7 +547,7 @@
 
 
 
-<!-- Create Topic Modal -->
+<!-- _create.gsp Topic Modal -->
 <div id="CreateTopic" class="modal fade" role="dialog">
     <div class="modal-dialog">
 
@@ -554,7 +555,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal">x</button>
-                <h4 class="modal-title">Create Topic(Pop up)</h4>
+                <h4 class="modal-title"> Topic(Pop up)</h4>
             </div>
 
             <div class="modal-body">
@@ -590,8 +591,14 @@
         </div>
     </div>
 </div>
+%{--
+<g:form class="form-horizontal" controller="topic" action="save">
+<g:render template="create"/>
 
+    <g:actionSubmit value="Save" class="btn btn-primary"  />
+</g:form>
 
+--}%
 
 
 </body>

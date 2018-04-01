@@ -2,7 +2,7 @@ package com.ttn.linksharing
 
 import com.ttn.linksharing.constants.DefaultPassword
 
-/*Create templates for resource/show topic/show user/login user/register*/
+/*_create.gsp templates for resource/show topic/show user/login user/register*/
 
 class LoginController {
 

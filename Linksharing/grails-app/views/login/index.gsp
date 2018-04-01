@@ -398,7 +398,7 @@ Login should work from login form on home page and show top posts and recent pos
 </div>
 
 
-<!-- Create Topic Modal -->
+<!-- _create.gsp Topic Modal -->
 <div id="CreateTopic" class="modal fade" role="dialog">
     <div class="modal-dialog">
 

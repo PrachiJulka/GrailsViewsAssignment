@@ -235,7 +235,7 @@
             </div>
 
 
-            <!-- Create Topic Modal -->
+            <!-- _create.gsp Topic Modal -->
             <div id="CreateTopic" class="modal fade" role="dialog">
                 <div class="modal-dialog">
 

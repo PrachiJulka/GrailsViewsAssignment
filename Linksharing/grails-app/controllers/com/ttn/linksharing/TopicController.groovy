@@ -26,7 +26,8 @@ class TopicController {
 
     }
 
-    def save(Topic topic,String seriousness){
+    def save(Topic topic){
+        println params.name
         topic.createdBy=session.user
         if(topic.save()){
             flash.message="Saved"
