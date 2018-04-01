@@ -1,7 +1,12 @@
 package com.ttn.linksharing
+
+import com.ttn.linksharing.co.SearchCO
+
 //
 /*
-Use eager fetching for topic and user in subscription*/
+Create transient method in user domain getSubscribedTopic to
+get only subscribed topics of user, this method will be used in user
+dashboard and dropdown of linkresource create and email invite of topic*/
 
 class User {
 
@@ -19,13 +24,18 @@ class User {
     String confirmPassword
    // String name
     //List<Topic> topics
-
-   static transients = ['confirmPassword']
     static hasMany = [topics:Topic,subscriptions:Subscription,resources:Resource,resourceRating:ResourceRating,readingItems:ReadingItem]/*,subscriptions:Subscription,resources:Resource*/
     static mapping = {
         sort("id":"desc")
         subscriptions lazy: false
     }
+
+
+    List getSubscribedTopic() {
+           this.subscriptions.toList()
+
+    }
+    static transients = ['confirmPassword','subscribedTopic']
 
     static constraints = {
         email(unique: true,email: true,blank: false,nullable: false)

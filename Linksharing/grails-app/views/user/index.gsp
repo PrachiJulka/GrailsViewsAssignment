@@ -156,14 +156,17 @@
                                     <img class="img-responsive" alt="dummy" src="index.jpeg"/>
                                 </div>
                                 <div class="col-lg-9">
+                                    <g:each in="${session.user.subscribedTopic}" var="subscribedTopics">
+
+                                    </g:each>
                                     <div class="row">
-                                        <div class=col-sm-12>
-                                            <a href="#" class="anchor">Grails </a>
+                                        <div class="col-sm-12">
+                                            <a href="#" class="anchor">${subscribedTopics.topics.name} </a>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-sm-4">
-                                            <small class="text-muted">@uday</small>
+                                            <small class="text-muted">@${subscribedTopics.user.userName}</small>
                                         </div>
                                         <div class="col-sm-4">
                                             Subscriptions</div>
@@ -236,7 +239,7 @@
 
                                             </div>
                                             <div class="col-sm-4">
-                                                <a class="fa fa-envelope-o" data-toggle="modal" href="${SendInvite}" aria-hidden="true"></a>
+                                                <a class="fa fa-envelope-o" data-toggle="modal" href="$SendInvite" aria-hidden="true"></a>
                                                 <a class="fa fa-file-o" data-toggle="modal" href="#CreateTopic" ariahidden="true"></a>
                                                 <a class="fa fa-trash" aria-hidden="true"></a>
                                             </div>

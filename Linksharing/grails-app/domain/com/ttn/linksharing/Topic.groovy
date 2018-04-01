@@ -1,4 +1,9 @@
 package com.ttn.linksharing
+
+import com.ttn.linksharing.enums.Seriousness
+import com.ttn.linksharing.enums.Visibility
+import com.ttn.linksharing.vo.TopicVO
+
 /*Use eager fetching for topic and user in subscription*/
 
 class Topic {
@@ -8,6 +13,11 @@ class Topic {
     Date lastUpdated
     Visibility visibility
     //List<Resource> resourceList
+    List getSubscribedUser(){
+        return this.subscriptions.user.toList()
+    }
+
+    static transients = ['subscribedUser']
 
     static belongsTo = [ createdBy : User]
     static hasMany = [subscriptions:Subscription, resources:Resource]

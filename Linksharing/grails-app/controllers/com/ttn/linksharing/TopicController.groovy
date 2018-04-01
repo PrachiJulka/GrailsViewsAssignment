@@ -1,11 +1,14 @@
 package com.ttn.linksharing
 
+import com.ttn.linksharing.co.ResourceSearchCO
 import org.hibernate.ObjectNotFoundException
 
 //If a topic is not saved errors should be logged flash error should be set and error text should be rendered
 class TopicController {
 
     def index() { }
+
+
 
     def show(ResourceSearchCO resourceSearchCO){
         def topic = Resource.search(resourceSearchCO).list()

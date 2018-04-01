@@ -80,27 +80,31 @@ Login should work from login form on home page and show top posts and recent pos
                 <div class="panel-heading">Login</div>
                 <div class="panel-body">
 
-                    <g:form class="form-horizontal" controller="login" action="loginHandler">
+                    <g:form class="form-horizontal" controller="login"
+                            action="loginHandler">
                         <div class="form-group">
-                            <label class="control-label col-sm-2" for="email">Email:</label>
+                            <label class="control-label col-sm-2" for="userName">Email:</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" id="email" placeholder="Enter email" name="email">
+                                <g:textField type="text" class="form-control"
+                                             placeholder="Enter email" name="userName" />
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="control-label col-sm-2" for="password">Password:</label>
                             <div class="col-sm-10">
-                                <input type="password" class="form-control" id="password" placeholder="Enter password" name="password">
+                                <g:passwordField type="password" class="form-control"
+                                                 placeholder="Enter password" name="password" />
                             </div>
                         </div>
 
                         <div class="form-group">
                             <div class="col-sm-5">
-                                <a href="" >forgot Password</a>
+                                <a href="#forgotPassword" data-toggle="modal"  aria-hidden="true" >forgot Password</a>
                             </div>
 
                             <div class="col-sm-5">
-                                <g:actionSubmit  value="Save" class="btn btn-default">LogIn</g:actionSubmit>
+                                <g:submitButton name="Save" value="Save"
+                                                class="btn btn-default">LogIn</g:submitButton>
                             </div>
                         </div>
                     </g:form>
@@ -430,6 +434,52 @@ Login should work from login form on home page and show top posts and recent pos
 
                             <input type="button"  id="insert" value="Add" class="btn btn-primary"/>
                             <input type="button"   value="Cancel" data-dismiss="modal" class="btn btn-primary"/>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- forgotPassword -->
+<div id="forgotPassword" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">x</button>
+                <h4 class="modal-title">Forgot Password(Pop up)</h4>
+            </div>
+
+            <div class="modal-body">
+                <form class="form-horizontal">
+
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">Password</label>
+                        <div class="col-sm-10">
+
+                            <input class="form-control" type="password" placeholder="Name" id="password2" name="password" />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">Confirm Password</label>
+                        <div class="col-sm-10">
+
+                            <input class="form-control" type="password" placeholder="Name" id="confirmPassword" name="confirmPassword" />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+
+
+                            <input type="button" id="change" value="Change" class="btn btn-primary"/>
+                            <input type="button" value="Cancel" data-dismiss="modal" class="btn btn-primary"/>
                         </div>
                     </div>
                 </form>

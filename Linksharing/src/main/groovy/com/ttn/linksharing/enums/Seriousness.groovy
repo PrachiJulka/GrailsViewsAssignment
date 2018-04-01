@@ -1,4 +1,4 @@
-package com.ttn.linksharing
+package com.ttn.linksharing.enums
 //Create static method in seriuosness
 // which take string as parameter and returns seriousness, it should be case insensitive
 enum Seriousness {

@@ -1,4 +1,4 @@
-package com.ttn.linksharing
+package com.ttn.linksharing.vo
 /*
 RatingInfoVO will have fields totalVotes, averageScore, totalScore*/
 

@@ -1,6 +1,8 @@
 package com.ttn.linksharing
 
-import com.ttn.constants.DefaultPassword
+import com.ttn.linksharing.co.ResourceSearchCO
+import com.ttn.linksharing.constants.DefaultPassword
+import com.ttn.linksharing.enums.Visibility
 
 /*
 Reading item of resource should be created only if it does not already exit in users reading item

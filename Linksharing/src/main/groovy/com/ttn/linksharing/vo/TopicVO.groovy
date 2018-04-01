@@ -1,4 +1,8 @@
-package com.ttn.linksharing
+package com.ttn.linksharing.vo
+
+import com.ttn.linksharing.User
+import com.ttn.linksharing.enums.Visibility
+
 /*
 Add resource show action and get trending topics also
 

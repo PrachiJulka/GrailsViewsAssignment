@@ -1,4 +1,4 @@
-package com.ttn.linksharing
+package com.ttn.linksharing.co
 /*
 -Add String q, Integer max,Integer offset,String order, String sort parameter in searchCO
  which will be used for text search*/

@@ -1,12 +1,12 @@
 package com.ttn.linksharing
 
-import com.ttn.constants.DefaultPassword
+import com.ttn.linksharing.constants.DefaultPassword
 
 /*Create templates for resource/show topic/show user/login user/register*/
 
 class LoginController {
 
-    static allowedMethods=[loginHandler: 'GET']
+
     def index() {
 
 
@@ -17,11 +17,11 @@ class LoginController {
         redirect(action:'login/index')
     }
 
-    def loginHandler(String email, String password) {
+    def loginHandler(String userName, String password) {
       //  println(userName)
-        User user = User.findByUserNameOrEmail(email, email)
+        User user = User.findByUserNameAndPassword(userName, password)
 
-        if(user!=null && user.password==password) {
+        if(user!=null) {
 
             if(user.active) {
              session.user=user

@@ -7,6 +7,7 @@ class UserController {
     def index() {
         /*render(session.user.userName)*/
        /* session.user.getUnreadResource()*/
+
     }
 
     def show(Integer id){

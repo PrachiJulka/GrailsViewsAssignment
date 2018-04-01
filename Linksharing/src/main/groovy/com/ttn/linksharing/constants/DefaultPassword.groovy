@@ -1,4 +1,4 @@
-package com.ttn.constants
+package com.ttn.linksharing.constants
 /*
 Add constants file for default password*/
 

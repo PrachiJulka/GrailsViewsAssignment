@@ -1,4 +1,7 @@
 package com.ttn.linksharing
+
+import com.ttn.linksharing.enums.Seriousness
+
 //Use eager fetching for topic and user in subscription
 class Subscription {
     Date dateCreated

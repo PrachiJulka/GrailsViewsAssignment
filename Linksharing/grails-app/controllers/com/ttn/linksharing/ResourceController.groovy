@@ -1,5 +1,6 @@
 package com.ttn.linksharing
 
+import com.ttn.linksharing.co.ResourceSearchCO
 import org.hibernate.ObjectNotFoundException
 
 /*
