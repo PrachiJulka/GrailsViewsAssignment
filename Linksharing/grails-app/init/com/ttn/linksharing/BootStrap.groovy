@@ -2,6 +2,7 @@ package com.ttn.linksharing
 
 import com.ttn.linksharing.co.ResourceSearchCO
 import com.ttn.linksharing.constants.DefaultPassword
+import com.ttn.linksharing.enums.Seriousness
 import com.ttn.linksharing.enums.Visibility
 
 /*

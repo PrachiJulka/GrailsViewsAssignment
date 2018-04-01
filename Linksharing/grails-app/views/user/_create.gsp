@@ -1,13 +1,23 @@
 
         <!-- Modal content-->
-        <div class="modal-content topic">
+%{--        <div class="modal-content topic">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal">x</button>
                 <h4 class="modal-title">Create Topic(Pop up)</h4>
             </div>
 
-            <div class="modal-body">
+            <div class="modal-body">--}%
+        <div class="modal-dialog">
 
+               <!-- Modal content-->
+               <div class="modal-content">
+                   <div class="modal-header">
+                       <button type="button" class="close" data-dismiss="modal">x</button>
+                       <h4 class="modal-title"> Topic(Pop up)</h4>
+                   </div>
+
+                   <div class="modal-body">
+        <g:form class="form-horizontal" controller="topic" action="save">
 
                     <div class="form-group">
                         <label class="col-sm-2 control-label">Name</label>
@@ -29,11 +39,12 @@
                     <div class="form-group">
                         <div class="col-sm-offset-2 col-sm-10">
 
-
+                            <g:actionSubmit value="Save" class="btn btn-primary"  />
 
                             <input type="button"   value="Cancel" data-dismiss="modal" class="btn btn-primary"/>
                         </div>
                     </div>
-
+        </g:form>
             </div>
+        </div>
         </div>

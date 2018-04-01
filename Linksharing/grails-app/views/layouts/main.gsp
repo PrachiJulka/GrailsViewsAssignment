@@ -78,7 +78,7 @@
     </div>
 </div>
 
-    <!--Share Link-->
+%{--    <!--Share Link-->
 <!--Share Link Modal-->
             <div id="shareLink" class="modal fade" role="dialog">
                 <div class="container">
@@ -232,8 +232,9 @@
                     </div>
                 </div>
             </div>
-            </div>
+            </div>--}%
 
+%{--
 
             <!-- _create.gsp Topic Modal -->
             <div id="CreateTopic" class="modal fade" role="dialog">
@@ -278,6 +279,7 @@
                     </div>
                 </div>
             </div>
+--}%
 
 
 
