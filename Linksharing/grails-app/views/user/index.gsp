@@ -384,69 +384,19 @@
 <!--Share Link-->
 <!--Share Link Modal-->
 <div id="shareLink" class="modal fade" role="dialog">
-    <g:render template="/linkResource/link"/>
+<g:render template="/linkResource/link"></g:render>
 </div>
 
 <!--Share Document Modal-->
 <div id="shareDocument" class="modal fade" role="dialog">
-    <div class="modal-dialog">
-
-        <!-- Modal content-->
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title">Share Document (Pop up)</h4>
-            </div>
-
-            <div class="modal-body">
-                <form class="form-horizontal" >
-                    <div class="form-group">
-                        <label class="control-label col-sm-2">Document</label>
-                        <div class="col-sm-10">
-
-                            <input class="form-control" type="file" name="document" id="document"/>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label class="control-label col-sm-2 font-normal" for="email" style="text-align: left">Description*</label>
-                        <div class="col-sm-10">
-
-                            <textarea  class="form-control" rows="4" placeholder="Description" id="description"></textarea>
-                        </div>
-
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label col-sm-2">Topic*</label>
-
-
-                        <div class="col-sm-10">
-
-                            <select name='topic' id="topicDocument">
-
-                            </select>
-
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="col-sm-offset-2 col-sm-10">
-
-                            <input type="button" name="Share" value="Share" id="shareDocumentBtn" class="btn btn-primary"/>
-
-                            <input type="button" name="Cancel" id="cancel1" value="Cancel" data-dismiss="modal" class="btn btn-primary"/>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
+    <g:render template="document"/>
 </div>
 
 <!--
                     Send Invitation Modal
              -->
 <div id="SendInvite" class="modal fade" role="dialog">
-    <g:render template="email"/>
+    <g:render template="email"></g:render>
 </div>
 
 
